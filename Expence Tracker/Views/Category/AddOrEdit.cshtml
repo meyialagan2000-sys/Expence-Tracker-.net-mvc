@@ -1,7 +1,7 @@
 ﻿@model Expence_Tracker.Models.Category
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Create a new category" : "Edit category";
 }
 
 
@@ -39,7 +39,7 @@
             <i class="fa-solid fa-shapes fa-2xl"></i>
         </div>
 </div>
-
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
